@@ -1,0 +1,18 @@
+[Unit]
+Description=Asterisk PJSIP test lab
+After=network.target
+
+[Service]
+Type=exec
+User=asterisk
+Group=asterisk
+WorkingDirectory=/var/lib/asterisk
+RuntimeDirectory=asterisk
+RuntimeDirectoryMode=0750
+ExecStart=/usr/sbin/asterisk -f -C /etc/asterisk/asterisk.conf
+ExecReload=/usr/sbin/asterisk -rx "core reload"
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

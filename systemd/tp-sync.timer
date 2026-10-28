@@ -1,0 +1,11 @@
+[Unit]
+Description=Refresh registered technical-support phones
+
+[Timer]
+OnActiveSec=1s
+OnUnitInactiveSec=10s
+AccuracySec=1s
+Unit=tp-sync.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,39 @@
+# Local planning and personal notes
+/PLAN.md
+/docs/worklog.md
+
+# Real credentials and local configuration
+/.env
+/.env.*
+!/.env.example
+/secrets/
+/config/local/
+pjsip-auth.conf
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Unprocessed call captures and logs
+/evidence/raw/
+*.pcap
+*.pcapng
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Secrets in any copied folder, runtime files
+pjsip-auth*.conf
+manager-tp.conf
+astdb*
+*.log
+*.tar.gz
+*.zip
+
+# Personal preparation notes live outside the project
+/docs/demo.md
+/docs/install-history.md
+/docs/from-scratch.md
+/docs/submission.md
+/docs/python-scripts.md
